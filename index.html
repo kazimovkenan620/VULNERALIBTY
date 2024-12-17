@@ -1,50 +1,483 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 
 <head>
-    <title>VULNERABLITY SITE !!!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+
+
+    
+    <style>
+        /* Pəncərələrə ümumi stil */
+        .dynamic-window {
+            background-color: #ffffff; /* Ağ arxa fon */
+            padding: 24px; /* İç boşluq */
+            border-radius: 12px; /* Yumru kənarlar */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Əsas kölgə */
+            transition: all 0.4s ease-in-out; /* Yumşaq keçid */
+            cursor: pointer;
+            transform: perspective(1000px) translateZ(0); /* Dərinlik */
+        }
+        
+        /* Hover zamanı dəyişikliklər */
+        .dynamic-window:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 12px rgba(0, 0, 0, 0.1); /* Yumşaq və dayaz kölgə */
+
+
+            transform: perspective(1000px) translateY(-10px) scale(1.03); /* Yuxarı qalxma və böyümə */
+            background-color: #e0e0e0; /* Daha tünd açıq boz arxa fon */
+            border: 1px solid #d1d5db; /* İncecik sərhəd xətti */
+        }
+        </style>
+        
+    
+
+
+
+    <style>
+        .header-4d {
+            background-color: #ffffff; /* Ağ arxa fon */
+            color: #000000; /* Qara mətn */
+            padding: 20px 40px;
+            box-shadow: 
+                0 5px 5px rgba(0, 0, 0, 0.1), /* Yumşaq kölgə */
+                0 10px 10px rgba(0, 0, 0, 0.2), /* Daha dərin kölgə */
+                0 15px 15px rgba(0, 0, 0, 0.3); /* Qabağa çıxma effekti */
+            border-radius: 8px; /* Yumşaq kənarlar */
+            text-transform: uppercase; /* Böyük hərflər */
+            font-weight: bold; /* Qalın yazı */
+            font-size: 1.5rem; /* Mətn ölçüsü */
+            letter-spacing: 2px; /* Hərf aralığı */
+            position: relative;
+            transform: perspective(1000px) translateZ(10px); /* Dərinlik (4D effekti) */
+            transition: all 0.3s ease-in-out; /* Hərəkət zamanı yumşaq keçid */
+        }
+        
+        .header-4d:hover {
+            transform: perspective(1000px) translateZ(20px); /* Hover zamanı daha qabarıq görünüş */
+            box-shadow: 
+                0 10px 10px rgba(0, 0, 0, 0.2),
+                0 15px 15px rgba(0, 0, 0, 0.3),
+                0 20px 20px rgba(0, 0, 0, 0.4); /* Hover zamanı kölgə artır */
+        }
+        </style>
+        
+        
+    
+
+    <style> /* SQL INJECTION STYLE*/
+        @keyframes darkNeonShift {
+            0%, 100% {
+                background-position: 0% 50%;
+                text-shadow: 0 0 5px #1e3a8a, 0 0 10px #1e3a8a, 0 0 15px #000000; /* Tünd Göy və Qara Neon */
+            }
+            50% {
+                background-position: 100% 50%;
+                text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 15px #1e3a8a; /* Qara və Tünd Göy Neon */
+            }
+        }
+        
+        .dark-neon-text {
+    font-size: 2rem; /* Yazı ölçüsü */
+    font-weight: 600; /* Orta qalınlıq */
+    text-transform: uppercase; /* Böyük hərflər */
+    letter-spacing: 2px; /* Hərf aralığı */
+    text-align: center; /* Yazını ortala */
+    
+    /* Gradient mətn */
+    background: linear-gradient(90deg, #1e3a8a, #000000, #1e3a8a);
+    background-size: 200% 200%; /* Daha optimal ölçü */
+    background-clip: text;
+    -webkit-background-clip: text; /* Gradient mətn üzərində tətbiq edilir */
+    -webkit-text-fill-color: transparent; /* Webkit brauzerlər üçün şəffaf mətn */
+
+    /* Gradient dəstəkləməyən brauzerlər üçün alternativ rəng */
+    color: #1e3a8a;
+
+    /* Rəng hərəkət animasiyası */
+    animation: darkNeonShift 5s ease-in-out infinite;
+}
+
+/* Gradient rəng dəyişmə animasiyası */
+@keyframes darkNeonShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+        </style>
+        
+
+
+    
+    <style> /* Cyber Time CTF logo ve yazisinin rengi ve hereketi */
+        @keyframes softWave {
+            0%, 100% {
+                transform: translateY(0); /* Sakit vəziyyət */
+                color: #60a5fa; /* Yumşaq Açıq Göy */
+                text-shadow: 0 0 4px #60a5fa, 0 0 6px #93c5fd, 0 0 4px #1f2937; /* Yumşaq göy və qara kölgə */
+            }
+            50% {
+                transform: translateY(-5px); /* Yüngül yuxarı dalğa */
+                color: #1f2937; /* Yumşaq Qara */
+                text-shadow: 0 0 6px #1f2937, 0 0 8px #60a5fa, 0 0 6px #2563eb; /* Yumşaq qara və göy kölgə */
+            }
+        }
+        
+        .wave-letter {
+            display: inline-block;
+            animation: softWave 2s ease-in-out infinite; /* Dalğa animasiyası */
+            font-size: 2rem; /* Kiçik və zərif yazı ölçüsü */
+            font-weight: 500; /* Orta qalınlıq (daha incə) */
+            letter-spacing: 2px; /* Hərf aralığını artırır */
+            animation-delay: calc(var(--delay) * 0.1s); /* Hərf üçün fərqli gecikmə */
+            color: #60a5fa; /* Başlanğıc rəng */
+        }
+        </style>
+        
+    <style> 
+        @keyframes waveEffect {
+          0%, 100% {
+            transform: translateY(0);
+            color: #38bdf8; /* Yumşaq Neon Göy */
+            text-shadow: 0 0 3px #38bdf8, 0 0 6px #2563eb, 0 0 8px #1e3a8a; /* Daha yumşaq kölgələr */
+          }
+          50% {
+            transform: translateY(-5px);
+            color: #1f2937; /* Yumşaq Qara (Tünd Boz) */
+            text-shadow: 0 0 3px #1f2937, 0 0 6px #38bdf8, 0 0 8px #2563eb; /* Yumşaq qara və neon göy */
+          }
+        }
+        @keyframes windWave {
+    0%, 100% {
+        transform: skewX(0deg) translateY(0); /* Sakit vəziyyət */
+    }
+    25% {
+        transform: skewX(-5deg) translateY(-5px); /* Sol tərəfə yüngül əyilmə */
+    }
+    50% {
+        transform: skewX(5deg) translateY(5px); /* Sağ tərəfə yüngül əyilmə */
+    }
+    75% {
+        transform: skewX(-3deg) translateY(-3px); /* Daha kiçik sol tərəfə əyilmə */
+    }
+}
+
+.wind-text {
+    display: inline-block;
+    font-size: 2.5rem; /* Yazı ölçüsü */
+    font-weight: 700; /* Qalınlıq */
+    color: #38bdf8; /* Neon Göy */
+    text-shadow: 0 0 8px #38bdf8, 0 0 12px #2563eb; /* Neon parıltı */
+    animation: windWave 3s ease-in-out infinite; /* Animasiya tətbiqi */
+          display: inline-block;
+          animation: waveEffect 2s ease-in-out infinite; /* Hamar və yavaş animasiya */
+          font-weight: 600; /* Orta qalınlıqda yazı */
+          letter-spacing: 1px; /* Kiçik hərf aralığı */
+        }
+
+        /* Saat və CYBER TIME Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .clock {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #003366;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .clock::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background-color: #003366;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .clock::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background-color: #00bfff;
+            bottom: 25%;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .cyber-text span:first-child {
+            color: #003366;
+        }
+
+        .cyber-text span:last-child {
+            color: #00bfff;
+        }
+
+        .cyber-text {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1;
+        }
+    </style> 
+    
+    
 </head>
 
 <body>
+   
 
-    <nav class="navbar navbar-expand-custom px-5 navbar-mainbg">
-        <a class="navbar-brand navbar-logo font-weight-bold " href="#">CyberTime</a>
+        <!-- Navigation -->
+        <div class="mx-auto">
+            <!-- Mobile Navigation -->
+            <div class="flex items-center justify-between header-4d">
 
+                <!-- Logo və Cyber Time CTF -->
+                <div class="flex items-center gap-4">
+                    <!-- Loqo -->
+                    <div class="logo-container">
+                        <div class="clock"></div>
+                        <div class="cyber-text">
+                            
+                            <h1 class="flex justify-center items-center">
+                                <span class="wave-letter" style="--delay: 1;">C</span>
+                                <span class="wave-letter" style="--delay: 2;">y</span>
+                                <span class="wave-letter" style="--delay: 3;">b</span>
+                                <span class="wave-letter" style="--delay: 4;">e</span>
+                                <span class="wave-letter" style="--delay: 5;">r</span>
+                                <span class="wave-letter" style="--delay: 6;">T</span>
+                                <span class="wave-letter" style="--delay: 7;">i</span>
+                                <span class="wave-letter" style="--delay: 8;">m</span>
+                                <span class="wave-letter" style="--delay: 9;">e</span>
+                                <span>&nbsp;</span>
+                                <span class="wave-letter" style="--delay: 10;">C</span>
+                                <span class="wave-letter" style="--delay: 11;">T</span>
+                                <span class="wave-letter" style="--delay: 12;">F</span>
+                            </h1>
+                            
 
-        <div class="row">
-            <button class="btn btn-md register"><a href="./register.html">Register</a></button>
-            <button class="btn btn-md btn-info login"><a href="./login.html">Login</a></button>
+                    
+                        </div>
+                    </div>
+
+                  
+
+                
+                <div class="flex items-center">
+                    
+                    
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                    
+                </div>
+            </div>
         </div>
-
-    </nav>
-
-
-  <div class="d-flex Search">
-    <form class="searchform" action="http://127.0.0.1:5000/search" method="post">
-        <div>
-            <input class="SearchText" type="text" name="query" placeholder="Enter a Name">
-            <input class="SearchSubmit" type="submit" value="Search">
-        </div>
-    </form>
-  </div>
-
-
-
+    </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic SQL Injection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dynamic-window {
+            background-color: #f8f6f6;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
 
+        .dynamic-window:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .dark-neon-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            text-align: center;
+            text-shadow: 0 0 8px #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-100 pb-10">
+        <!-- Başlıq -->
+        <div class="flex justify-center">
+            <h1 id="page-title" class="dark-neon-text mb-6">SQL INJECTION</h1>
+        </div>
+
+        <!-- Pəncərələr -->
+        <div id="content" class="grid grid-cols-3 gap-4 px-4">
+            <div class="dynamic-window">
+                <span class="task-type text-xs font-semibold text-gray-600">Classic SQL Injection</span>
+                <p class="task-desc text-sm text-gray-500">Verify</p>
+                <p class="task-solves text-sm font-bold text-gray-900">0 solves</p>
+                <p class="task-level text-sm font-medium text-green-700">Easy</p>
+            </div>
+            <div class="dynamic-window">
+                <span class="task-type text-xs font-semibold text-gray-600">Classic SQL Injection</span>
+                <p class="task-desc text-sm text-gray-500">Verify</p>
+                <p class="task-solves text-sm font-bold text-gray-900">0 solves</p>
+                <p class="task-level text-sm font-medium text-green-700">Easy</p>
+            </div>
+            <div class="dynamic-window">
+                <span class="task-type text-xs font-semibold text-gray-600">Classic SQL Injection</span>
+                <p class="task-desc text-sm text-gray-500">Verify</p>
+                <p class="task-solves text-sm font-bold text-gray-900">0 solves</p>
+                <p class="task-level text-sm font-medium text-green-700">Easy</p>
+            </div>
+        </div>
+        
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-6 gap-4">
+            <!-- Previous düyməsi -->
+            <button onclick="changePage('prev')" class="px-4 py-2 bg-blue-400 text-white rounded-md cursor-pointer hover:bg-blue-500 transition">
+                Previous
+            </button>
+        
+            <!-- Səhifə nömrələri -->
+            <button id="page-1" onclick="changePage(1)" class="page-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">1</button>
+            <button id="page-2" onclick="changePage(2)" class="page-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">2</button>
+            <button id="page-3" onclick="changePage(3)" class="page-btn px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">3</button>
+        
+            <!-- Next düyməsi -->
+            <button onclick="changePage('next')" class="px-4 py-2 bg-blue-400 text-white rounded-md cursor-pointer hover:bg-blue-500 transition">
+                Next
+            </button>
+        </div>
+        
+        <script>
+            let currentPage = 1; // Başlanğıcda 1-ci səhifə aktivdir
+            const totalPages = 3; // Ümumi səhifə sayı
+        
+            function changePage(page) {
+                // "Previous" və "Next" düymələrinin məntiqi
+                if (page === 'prev' && currentPage > 1) {
+                    currentPage--;
+                } else if (page === 'next' && currentPage < totalPages) {
+                    currentPage++;
+                } else if (typeof page === 'number') {
+                    currentPage = page; // Birbaşa səhifə nömrəsi
+                }
+        
+                // Bütün səhifə düymələrindən aktiv rəngi sil
+                document.querySelectorAll('.page-btn').forEach(btn => {
+                    btn.classList.remove('bg-blue-700', 'text-white'); // Aktiv rəngləri sil
+                    btn.classList.add('bg-gray-200', 'text-gray-800'); // Passiv rəng əlavə et
+                });
+        
+                // Aktiv səhifəyə mavi rəng əlavə et
+                const activeButton = document.getElementById(`page-${currentPage}`);
+                if (activeButton) {
+                    activeButton.classList.add('bg-blue-700', 'text-white'); // Aktiv rəng
+                    activeButton.classList.remove('bg-gray-200', 'text-gray-800'); // Passiv rəngi sil
+                }
+            }
+        
+            // İlk səhifəni aktiv göstərmək
+            changePage(1);
+        </script>
+        
+
+        
+        
+        
+        
+
+    <script>
+        const pages = {
+    1: {
+        title: "SQL INJECTION",
+        content: [
+            ["Classic SQL Injection", "Verify", "0 solves", "Easy"],
+            ["Classic SQL Injection", "Verify", "0 solves", "Medium"],
+            ["Classic SQL Injection", "Verify", "0 solves", "Hard"]
+        ]
+    },
+    2: {
+        title: "XSS (Cross-Site Scripting)",
+        content: [
+            ["Reflected XSS", "Verify", "0 solves", "Easy"],
+            ["Reflected XSS", "Verify", "0 solves", "Medium"],
+            ["Reflected XSS", "Verify", "0 solves", "Hard"]
+        ]
+    },
+    3: {
+        title: "IDOR (Insecure Direct Object Reference)",
+        content: [
+            ["Direct IDOR", "Verify", "0 solves", "Easy"],
+            ["Direct IDOR", "Verify", "0 solves", "Medium"],
+            ["Direct IDOR", "Verify", "0 solves", "Hard"]
+        ]
+    }
+};
+
+function changePage(page) {
+    const pageData = pages[page];
+    document.getElementById("page-title").innerText = pageData.title;
+
+    const dynamicWindows = document.querySelectorAll(".dynamic-window");
+
+    // Mövcud pəncərələrə məlumatları tətbiq et
+    dynamicWindows.forEach((window, index) => {
+        const task = pageData.content[index];
+        if (task) {
+            window.querySelector(".task-type").innerText = task[0];
+            window.querySelector(".task-desc").innerText = task[1];
+            window.querySelector(".task-solves").innerText = task[2];
+            window.querySelector(".task-level").innerText = task[3];
+        }
+    });
+}
+
+// İlk səhifəni göstər
+changePage(1);
+
+
+        function changePage(page) {
+            if (page === 'prev') currentPage = Math.max(1, currentPage - 1);
+            else if (page === 'next') currentPage = Math.min(3, currentPage + 1);
+            else currentPage = page;
+
+            const data = pages[currentPage];
+            document.getElementById("page-title").innerText = data.title;
+
+            const windows = document.querySelectorAll(".dynamic-window");
+            windows.forEach((window, idx) => {
+                const task = data.content[idx];
+                window.querySelector(".task-type").innerText = task[0];
+                window.querySelector(".task-desc").innerText = task[1];
+                window.querySelector(".task-solves").innerText = task[2];
+                window.querySelector(".task-level").innerText = task[3];
+            });
+        }
+    </script>
+</body>
 </html>
